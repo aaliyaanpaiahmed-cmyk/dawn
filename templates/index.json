@@ -60,14 +60,14 @@
         "heading_line1": {
           "type": "heading",
           "settings": {
-            "heading": "Graphic",
+            "heading": "Wear",
             "heading_size": "h0"
           }
         },
         "heading_line2": {
           "type": "heading",
           "settings": {
-            "heading": "or die.",
+            "heading": "The Void",
             "heading_size": "h0"
           }
         },
@@ -100,6 +100,7 @@
       "settings": {
         "corner_label_line_1": "Drop 04",
         "corner_label_line_2": "Graphic tees only",
+        "image": "shopify://shop_images/vb.jpg",
         "image_overlay_opacity": 0,
         "image_height": "large",
         "image_behavior": "none",
