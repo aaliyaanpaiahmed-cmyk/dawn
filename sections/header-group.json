@@ -33,7 +33,7 @@
       "settings": {
         "color_scheme": "scheme-void",
         "menu_color_scheme": "scheme-void",
-        "logo_position": "middle-left",
+        "logo_position": "middle-center",
         "menu": "main-menu",
         "menu_type_desktop": "dropdown",
         "sticky_header_type": "always",

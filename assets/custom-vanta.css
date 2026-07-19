@@ -36,8 +36,35 @@
   text-transform: uppercase;
 }
 
+.header-wrapper.color-scheme-void .header__heading-link {
+  justify-self: center;
+}
+
 .header-wrapper.color-scheme-void .header__icons {
   font-family: var(--vanta-mono);
+  gap: 2rem;
+}
+
+.header-wrapper.color-scheme-void .header__icon .svg-wrapper,
+.header-wrapper.color-scheme-void .header__icon .cart-count-bubble {
+  display: none;
+}
+
+.header-wrapper.color-scheme-void .header__icon-label {
+  font-size: 1.2rem;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  white-space: nowrap;
+}
+
+.header-wrapper.color-scheme-void .header__icon--wish {
+  cursor: default;
+}
+
+.header-wrapper.color-scheme-void .header__icon--cart .header__icon-label {
+  border: 1px solid var(--vanta-line);
+  border-radius: 2px;
+  padding: 0.6rem 1.1rem;
 }
 
 /* ---------- Announcement bar ---------- */

@@ -275,8 +275,13 @@
               endif
             -%}
           </span>
+          <span class="header__icon-label" aria-hidden="true">Account</span>
         </a>
       {%- endif -%}
+
+      <a href="#" role="link" aria-disabled="true" class="header__icon header__icon--wish link focus-inset">
+        <span class="header__icon-label">Wish &middot; 0</span>
+      </a>
 
       {%- for block in section.blocks -%}
         {%- case block.type -%}
@@ -292,6 +297,7 @@
           <span class="svg-wrapper">{{ 'icon-cart.svg' | inline_asset_content }}</span>
         {% endif %}
         <span class="visually-hidden">{{ 'templates.cart.cart' | t }}</span>
+        <span class="header__icon-label" aria-hidden="true">Bag &middot; {{ cart.total_price | money }}</span>
         {%- if cart != empty -%}
           <div class="cart-count-bubble">
             {%- if cart.item_count < 100 -%}
