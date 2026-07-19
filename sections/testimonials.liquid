@@ -9,8 +9,8 @@
 
   .testimonials__meta {
     font-family: 'Space Mono', ui-monospace, monospace;
-    font-size: 1.2rem;
-    letter-spacing: 0.2em;
+    font-size: 1.1rem;
+    letter-spacing: 0.28em;
     text-transform: uppercase;
     opacity: 0.65;
     margin-top: 1.2rem;
@@ -30,9 +30,22 @@
   }
 
   .testimonials__card {
+    position: relative;
     border: 1px solid rgba(var(--color-foreground), 0.14);
     border-radius: 3px;
     padding: 2.4rem;
+  }
+
+  .testimonials__card::before {
+    content: '"';
+    position: absolute;
+    top: 0.8rem;
+    right: 1.6rem;
+    font-family: 'Archivo', sans-serif;
+    font-size: 4.4rem;
+    font-weight: 900;
+    color: rgba(var(--color-foreground), 0.08);
+    line-height: 1;
   }
 
   .testimonials__stars {

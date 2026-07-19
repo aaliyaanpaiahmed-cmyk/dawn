@@ -1,34 +1,72 @@
 {
   "sections": {
+    "marquee": {
+      "type": "marquee",
+      "blocks": {
+        "item_1": {
+          "type": "item",
+          "settings": {
+            "text": "New drop every friday"
+          }
+        },
+        "item_2": {
+          "type": "item",
+          "settings": {
+            "text": "Limited runs only"
+          }
+        },
+        "item_3": {
+          "type": "item",
+          "settings": {
+            "text": "Graphic tees, oversized"
+          }
+        },
+        "item_4": {
+          "type": "item",
+          "settings": {
+            "text": "Never restocked"
+          }
+        }
+      },
+      "block_order": [
+        "item_1",
+        "item_2",
+        "item_3",
+        "item_4"
+      ],
+      "settings": {
+        "color_scheme": "scheme-panel"
+      }
+    },
     "image_banner": {
       "type": "image-banner",
       "blocks": {
         "eyebrow": {
           "type": "text",
           "settings": {
-            "text": "Oversized · 240gsm · Boxed fit",
+            "text": "Oversized · 240gsm · Screen-printed",
             "text_style": "caption-with-letter-spacing"
           }
         },
         "heading": {
           "type": "heading",
           "settings": {
-            "heading": "WEAR THE<br><span class=\"outline\">VOID.</span>",
+            "heading": "Graphic<span class=\"outline\">or die.</span>",
             "heading_size": "h0"
           }
         },
         "paragraph": {
           "type": "text",
           "settings": {
-            "text": "Heavyweight oversized tees cut for the dark. Eight-piece launch collection, dropped in limited runs and never restocked.",
+            "text": "Loud prints on heavyweight cotton. Eight-piece drop, screen-printed in small batches — once it's gone, it's gone.",
             "text_style": "body"
           }
         },
         "button": {
           "type": "buttons",
           "settings": {
-            "button_label_1": "Shop new arrivals →",
-            "button_link_1": "shopify://collections/all",
+            "button_label_1": "Shop the drop →",
+            "button_link_1": "shopify://collections/new-arrivals-1",
             "button_style_secondary_1": false,
             "button_label_2": "Browse the range",
             "button_link_2": "shopify://collections",
@@ -43,6 +81,8 @@
         "button"
       ],
       "settings": {
+        "corner_label_line_1": "Drop 04",
+        "corner_label_line_2": "Graphic tees only",
         "image_overlay_opacity": 0,
         "image_height": "large",
         "desktop_content_position": "bottom-center",
@@ -64,7 +104,7 @@
         "description": "",
         "show_description": false,
         "description_style": "body",
-        "collection": "all",
+        "collection": "new-arrivals-1",
         "products_to_show": 8,
         "columns_desktop": 4,
         "color_scheme": "scheme-void",
@@ -90,19 +130,19 @@
         "collection_1": {
           "type": "featured_collection",
           "settings": {
-            "collection": ""
+            "collection": "men-1"
           }
         },
         "collection_2": {
           "type": "featured_collection",
           "settings": {
-            "collection": ""
+            "collection": "women-1"
           }
         },
         "collection_3": {
           "type": "featured_collection",
           "settings": {
-            "collection": ""
+            "collection": "unisex"
           }
         }
       },
@@ -112,6 +152,7 @@
         "collection_3"
       ],
       "settings": {
+        "subheading": "Find your fit",
         "title": "Shop by collection",
         "heading_size": "h1",
         "image_ratio": "portrait",
@@ -133,7 +174,7 @@
         "description": "",
         "show_description": false,
         "description_style": "body",
-        "collection": "all",
+        "collection": "trending",
         "products_to_show": 8,
         "columns_desktop": 4,
         "color_scheme": "scheme-void",
@@ -168,7 +209,7 @@
           "type": "review",
           "settings": {
             "rating": 5,
-            "quote": "The black is properly black — not that faded grey you get everywhere else. Exactly what I wanted.",
+            "quote": "The prints hold up wash after wash — no cracking. Exactly what I wanted from a graphic tee brand.",
             "author": "Areeba · Karachi"
           }
         },
@@ -176,7 +217,7 @@
           "type": "review",
           "settings": {
             "rating": 5,
-            "quote": "Fast delivery, boxed fit sits perfect at 6ft. This is my third order now.",
+            "quote": "Fast delivery, boxed fit sits perfect at 6ft. This is my third order from Vanta now.",
             "author": "Bilal · Islamabad"
           }
         }
@@ -202,7 +243,7 @@
         "heading": {
           "type": "heading",
           "settings": {
-            "heading": "Get 10% off drop 01",
+            "heading": "Get 10% off drop 04",
             "heading_size": "h1"
           }
         },
@@ -231,6 +272,7 @@
     }
   },
   "order": [
+    "marquee",
     "image_banner",
     "featured_collection_new",
     "collection_list",

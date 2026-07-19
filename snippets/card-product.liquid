@@ -46,7 +46,7 @@
       <div
         class="
           card card--{{ settings.card_style }}
-          {% if card_product.featured_media %} card--media{% else %} card--text{% endif %}
+          card--media
           {% if settings.card_style == 'card' %} color-{{ settings.card_color_scheme }} gradient{% endif %}
           {% if image_shape and image_shape != 'default' %} card--shape{% endif %}
           {% if extend_height %} card--extend-height{% endif %}
@@ -59,8 +59,19 @@
           class="card__inner {% if settings.card_style == 'standard' %}color-{{ settings.card_color_scheme }} gradient{% endif %}{% if card_product.featured_media or settings.card_style == 'standard' %} ratio{% endif %}"
           style="--ratio-percent: {{ 1 | divided_by: ratio | times: 100 }}%;"
         >
-          {%- if card_product.featured_media -%}
-            <div class="card__media{% if image_shape and image_shape != 'default' %} shape--{{ image_shape }} color-{{ settings.card_color_scheme }} gradient{% endif %}">
+          {%- liquid
+            assign card_tag_label = ''
+            if card_product.tags contains 'new'
+              assign card_tag_label = 'New'
+            elsif card_product.tags contains 'best-seller'
+              assign card_tag_label = 'Best seller'
+            endif
+          -%}
+          <div class="card__media{% if image_shape and image_shape != 'default' %} shape--{{ image_shape }} color-{{ settings.card_color_scheme }} gradient{% endif %}">
+            {%- if card_tag_label != '' -%}
+              <span class="card__tag-badge">{{ card_tag_label }}</span>
+            {%- endif -%}
+            {%- if card_product.featured_media -%}
               <div class="media media--transparent media--hover-effect">
                 {% comment %}theme-check-disable ImgLazyLoading{% endcomment %}
                 <img
@@ -106,8 +117,12 @@
                   >
                 {%- endif -%}
               </div>
-            </div>
-          {%- endif -%}
+            {%- else -%}
+              <div class="card__media-placeholder">
+                <span>Product image</span>
+              </div>
+            {%- endif -%}
+          </div>
           <div class="card__content">
             <div class="card__information">
               <h3

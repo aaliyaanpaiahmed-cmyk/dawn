@@ -1,43 +1,59 @@
-/* Vanta redesign — global overrides layered on top of base.css */
+/* Vanta redesign — "Poster Drop" — global overrides layered on top of base.css */
 
 :root {
   --vanta-void: #0a0a0a;
   --vanta-ink: #000000;
   --vanta-bone: #f4f2ec;
   --vanta-ash: #8f8f8a;
+  --vanta-muted-light: #6b6b66;
+  --vanta-footer-text: #cfcdc6;
+  --vanta-panel-1: #111111;
+  --vanta-panel-2: #141414;
+  --vanta-panel-3: #181818;
+  --vanta-panel-4: #161616;
+  --vanta-panel-5: #1c1c1c;
   --vanta-line: rgba(244, 242, 236, 0.14);
+  --vanta-quote: rgba(244, 242, 236, 0.08);
   --vanta-mono: 'Space Mono', ui-monospace, monospace;
 }
 
 .color-scheme-void,
-.color-scheme-bone {
+.color-scheme-bone,
+.color-scheme-panel {
   --font-heading-family: 'Archivo', sans-serif;
 }
 
 /* ---------- Header ---------- */
 .header-wrapper.color-scheme-void {
-  background: rgba(10, 10, 10, 0.86);
-  backdrop-filter: blur(10px);
+  background: transparent;
   border-bottom: 1px solid var(--vanta-line);
+}
+
+.header-wrapper.color-scheme-void .header {
+  min-height: 8rem;
 }
 
 .header-wrapper.color-scheme-void .header__heading-link {
   font-weight: 900;
-  font-size: 2rem;
-  letter-spacing: 0.3em;
+  font-size: 3rem;
+  letter-spacing: 0.42em;
   text-transform: uppercase;
+  padding-left: 0.42em;
+  justify-self: center;
 }
 
 .header-wrapper.color-scheme-void .list-menu__item--link,
 .header-wrapper.color-scheme-void summary.list-menu__item {
   font-family: var(--vanta-mono);
   font-size: 1.2rem;
-  letter-spacing: 0.14em;
+  letter-spacing: 0.16em;
   text-transform: uppercase;
+  opacity: 0.82;
+  transition: opacity 0.2s;
 }
 
-.header-wrapper.color-scheme-void .header__heading-link {
-  justify-self: center;
+.header-wrapper.color-scheme-void .list-menu__item--link:hover {
+  opacity: 1;
 }
 
 .header-wrapper.color-scheme-void .header__icons {
@@ -55,13 +71,11 @@
   letter-spacing: 0.1em;
   text-transform: uppercase;
   white-space: nowrap;
-}
-
-.header-wrapper.color-scheme-void .header__icon--wish {
-  cursor: default;
+  opacity: 0.82;
 }
 
 .header-wrapper.color-scheme-void .header__icon--cart .header__icon-label {
+  opacity: 1;
   border: 1px solid var(--vanta-line);
   border-radius: 2px;
   padding: 0.6rem 1.1rem;
@@ -76,28 +90,54 @@
 .color-scheme-bone .announcement-bar__message {
   font-family: var(--vanta-mono);
   font-size: 1.15rem;
-  letter-spacing: 0.2em;
+  letter-spacing: 0.22em;
   text-transform: uppercase;
+}
+
+/* ---------- Marquee ---------- */
+.marquee.color-scheme-panel {
+  border-bottom: 1px solid var(--vanta-line);
 }
 
 /* ---------- Hero / image banner ---------- */
 .banner:has(.banner__box.color-scheme-void) {
   background: radial-gradient(120% 90% at 50% 0%, #161616 0%, #0a0a0a 58%, #000 100%);
+  min-height: 62rem;
+  position: relative;
+}
+
+.banner__corner-label {
+  position: absolute;
+  top: 2.6rem;
+  right: 2.8rem;
+  z-index: 2;
+  text-align: right;
+  font-family: var(--vanta-mono);
+  font-size: 1.1rem;
+  letter-spacing: 0.28em;
+  text-transform: uppercase;
+  color: var(--vanta-ash);
+}
+
+.banner__corner-label span {
+  display: block;
+  margin-top: 0.6rem;
 }
 
 .banner__box.color-scheme-void .banner__heading {
   text-transform: uppercase;
   font-weight: 900;
-  line-height: 0.88;
+  line-height: 0.82;
   letter-spacing: -0.01em;
-  font-size: clamp(4rem, 9vw, 11rem);
+  font-size: clamp(7.6rem, 11vw, 14rem);
+  margin: 1.6rem 0 2.6rem;
 }
 
 .banner__box.color-scheme-void .banner__heading .outline {
-  display: inline-block;
+  display: block;
+  font-weight: 500;
   color: transparent;
   -webkit-text-stroke: 1px var(--vanta-bone);
-  text-stroke: 1px var(--vanta-bone);
 }
 
 .banner__box.color-scheme-void .banner__text.caption-with-letter-spacing {
@@ -106,22 +146,27 @@
   font-size: 1.1rem;
   letter-spacing: 0.28em;
   text-transform: uppercase;
-  margin-bottom: 1.2rem;
 }
 
 .banner__box.color-scheme-void .banner__text.body {
   color: var(--vanta-ash);
-  font-family: var(--vanta-mono);
-  font-size: 1.4rem;
-  letter-spacing: 0.02em;
-  max-width: 46rem;
+  font-size: 1.5rem;
+  line-height: 1.6;
+  max-width: 52rem;
+  margin-bottom: 3rem;
+}
+
+.banner__box.color-scheme-void .banner__buttons {
+  gap: 1.4rem;
 }
 
 .banner__box.color-scheme-void .button {
   font-family: var(--vanta-mono);
   font-weight: 700;
-  letter-spacing: 0.18em;
+  letter-spacing: 0.2em;
   text-transform: uppercase;
+  font-size: 1.2rem;
+  padding: 1.6rem 2.6rem;
   border-radius: 2px;
 }
 
@@ -133,6 +178,8 @@
   text-transform: uppercase;
   font-weight: 900;
   letter-spacing: -0.01em;
+  font-size: 4.4rem;
+  line-height: 1;
 }
 
 .title-wrapper--with-view-all {
@@ -146,17 +193,22 @@
 .collection__subheading {
   font-family: var(--vanta-mono);
   font-size: 1.1rem;
-  letter-spacing: 0.24em;
+  letter-spacing: 0.28em;
   text-transform: uppercase;
   opacity: 0.6;
-  margin-bottom: 1rem;
+  margin-bottom: 1.2rem;
+}
+
+.color-scheme-bone .collection__subheading {
+  color: var(--vanta-muted-light);
+  opacity: 1;
 }
 
 .color-scheme-void .collection__title-view-all,
 .color-scheme-bone .collection__title-view-all {
   font-family: var(--vanta-mono);
   font-size: 1.2rem;
-  letter-spacing: 0.14em;
+  letter-spacing: 0.16em;
   text-transform: uppercase;
   white-space: nowrap;
 }
@@ -170,23 +222,64 @@
 .color-scheme-void .card-wrapper .card__inner,
 .color-scheme-void .card-wrapper .card__media {
   border: 1px solid var(--vanta-line);
+  border-radius: 3px;
+  overflow: hidden;
+}
+
+.card__media-placeholder {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  min-height: 100%;
+  background: repeating-linear-gradient(135deg, #141414, #141414 10px, #181818 10px, #181818 20px);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.card__media-placeholder span {
+  font-family: var(--vanta-mono);
+  font-size: 1rem;
+  letter-spacing: 0.24em;
+  color: #4a4a45;
+  text-transform: uppercase;
+}
+
+.card__tag-badge {
+  position: absolute;
+  top: 1.2rem;
+  left: 1.2rem;
+  z-index: 2;
+  transform: rotate(-6deg);
+  font-family: var(--vanta-mono);
+  font-size: 1rem;
+  font-weight: 700;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+  background: var(--vanta-bone);
+  color: var(--vanta-ink);
+  padding: 0.5rem 0.9rem;
+  border-radius: 2px;
 }
 
 .color-scheme-void .card__heading {
   font-weight: 600;
+  font-size: 1.45rem;
   letter-spacing: 0.01em;
-}
-
-.color-scheme-void .card__badge .badge {
-  font-family: var(--vanta-mono);
-  font-size: 1rem;
-  letter-spacing: 0.14em;
-  text-transform: uppercase;
-  border-radius: 2px;
 }
 
 .color-scheme-void .price {
   font-family: var(--vanta-mono);
+  font-size: 1.3rem;
+  color: var(--vanta-bone);
+}
+
+.color-scheme-void .rating-text,
+.color-scheme-void .rating-count {
+  font-family: var(--vanta-mono);
+  font-size: 1.1rem;
+  letter-spacing: 0.1em;
+  color: var(--vanta-ash);
 }
 
 .color-scheme-void .quick-add__submit {
@@ -197,12 +290,100 @@
   border-radius: 2px;
 }
 
-/* ---------- Collection tiles ---------- */
-.color-scheme-bone .card--collection .card__heading {
+/* ---------- Trending: horizontal scroll ---------- */
+#shopify-section-featured_collection_trending .product-grid {
+  display: flex !important;
+  overflow-x: auto;
+  gap: 1.8rem;
+  padding-bottom: 0.8rem;
+}
+
+#shopify-section-featured_collection_trending .product-grid .grid__item {
+  flex: 0 0 26rem;
+  width: 26rem;
+}
+
+/* ---------- Shop by collection: asymmetric overlay grid ---------- */
+#shopify-section-collection_list .collection-list {
+  display: grid !important;
+  grid-template-columns: 1.4fr 1fr;
+  grid-template-rows: 1fr 1fr;
+  gap: 1.8rem;
+  height: 52rem;
+}
+
+#shopify-section-collection_list .collection-list__item {
+  height: 100%;
+}
+
+#shopify-section-collection_list .collection-list__item:nth-child(1) {
+  grid-row: 1 / 3;
+  grid-column: 1;
+}
+
+#shopify-section-collection_list .collection-list__item:nth-child(2) {
+  grid-row: 1;
+  grid-column: 2;
+}
+
+#shopify-section-collection_list .collection-list__item:nth-child(3) {
+  grid-row: 2;
+  grid-column: 2;
+}
+
+#shopify-section-collection_list .card-wrapper,
+#shopify-section-collection_list .card,
+#shopify-section-collection_list .card__inner {
+  height: 100%;
+}
+
+#shopify-section-collection_list .card__inner {
+  position: relative;
+  border-radius: 3px;
+  overflow: hidden;
+}
+
+#shopify-section-collection_list .card__content {
+  position: absolute;
+  inset: auto 0 0 0;
+  padding: 2.4rem;
+  z-index: 2;
+}
+
+#shopify-section-collection_list .card__heading {
+  color: var(--vanta-bone);
   font-weight: 900;
-  font-size: 1.9rem;
   text-transform: uppercase;
-  letter-spacing: 0.02em;
+  font-size: 3rem;
+}
+
+#shopify-section-collection_list .card__caption {
+  font-family: var(--vanta-mono);
+  font-size: 1.1rem;
+  letter-spacing: 0.16em;
+  color: var(--vanta-ash);
+  text-transform: uppercase;
+  margin-top: 0.6rem;
+}
+
+#shopify-section-collection_list .icon-wrap {
+  display: none;
+}
+
+#shopify-section-collection_list .collection-list__item:nth-child(1) .card__inner {
+  background: var(--vanta-panel-1);
+}
+
+#shopify-section-collection_list .collection-list__item:nth-child(2) .card__inner {
+  background: var(--vanta-panel-5);
+}
+
+#shopify-section-collection_list .collection-list__item:nth-child(3) .card__inner {
+  background: var(--vanta-panel-4);
+}
+
+#shopify-section-collection_list .collection-list__item:nth-child(1) .card__heading {
+  font-size: 4rem;
 }
 
 /* ---------- Newsletter ---------- */
@@ -214,25 +395,56 @@
 .newsletter.color-scheme-void h2 {
   text-transform: uppercase;
   font-weight: 900;
+  font-size: 3.6rem;
+  line-height: 1;
 }
 
 .newsletter.color-scheme-void .newsletter__subheading {
   font-family: var(--vanta-mono);
   color: var(--vanta-ash);
+  font-size: 1.4rem;
+  letter-spacing: 0.04em;
+  margin-top: 1rem;
+}
+
+.newsletter.color-scheme-void .newsletter-form__field-wrapper .field {
+  border: 1px solid var(--vanta-line);
+  border-radius: 2px;
+  overflow: hidden;
 }
 
 .newsletter.color-scheme-void .field__input {
   font-family: var(--vanta-mono);
+  font-size: 1.3rem;
 }
 
 .newsletter.color-scheme-void .newsletter-form__button {
   font-family: var(--vanta-mono);
-  letter-spacing: 0.14em;
+  font-weight: 700;
+  letter-spacing: 0.18em;
   text-transform: uppercase;
+  font-size: 1.2rem;
   border-radius: 2px;
 }
 
 /* ---------- Footer ---------- */
+.footer.color-scheme-void .footer-block__brand-info .footer-block__heading {
+  font-weight: 900;
+  font-size: 3.4rem;
+  letter-spacing: 0.34em;
+  text-transform: uppercase;
+  padding-left: 0.34em;
+  margin-bottom: 1.8rem;
+}
+
+.footer.color-scheme-void .footer-block__brand-info .rte {
+  color: var(--vanta-ash);
+  font-family: var(--vanta-mono);
+  font-size: 1.2rem;
+  line-height: 1.7;
+  max-width: 30rem;
+}
+
 .footer.color-scheme-void .footer-block__heading {
   font-family: var(--vanta-mono);
   font-size: 1.1rem;
@@ -241,17 +453,21 @@
   color: var(--vanta-ash);
 }
 
-.footer.color-scheme-void .footer-block__details-content a {
-  color: rgba(244, 242, 236, 0.8);
+.footer.color-scheme-void .footer-block__details-content a,
+.footer.color-scheme-void .footer-block__details-content p {
+  color: var(--vanta-footer-text);
+  font-size: 1.35rem;
 }
 
 .footer.color-scheme-void .footer-block__details-content a:hover {
   color: var(--vanta-bone);
 }
 
-.footer.color-scheme-void .footer__copyright {
+.footer.color-scheme-void .footer__copyright,
+.footer.color-scheme-void .footer__column {
   font-family: var(--vanta-mono);
   font-size: 1.1rem;
   letter-spacing: 0.12em;
   text-transform: uppercase;
+  color: var(--vanta-ash);
 }

@@ -80,16 +80,27 @@
             "secondary_button_label": "#0A0A0A",
             "shadow": "#000000"
           }
+        },
+        "scheme-panel": {
+          "settings": {
+            "background": "#111111",
+            "background_gradient": "",
+            "text": "#8F8F8A",
+            "button": "#8F8F8A",
+            "button_label": "#111111",
+            "secondary_button_label": "#8F8F8A",
+            "shadow": "#000000"
+          }
         }
       },
       "type_header_font": "assistant_n4",
       "heading_scale": 100,
       "type_body_font": "assistant_n4",
       "body_scale": 100,
-      "page_width": 1200,
+      "page_width": 1360,
       "spacing_sections": 0,
-      "spacing_grid_horizontal": 8,
-      "spacing_grid_vertical": 8,
+      "spacing_grid_horizontal": 20,
+      "spacing_grid_vertical": 20,
       "animations_reveal_on_scroll": true,
       "animations_hover_elements": "none",
       "buttons_border_thickness": 1,
@@ -177,8 +188,8 @@
       "badge_corner_radius": 40,
       "sale_badge_color_scheme": "scheme-4",
       "sold_out_badge_color_scheme": "scheme-3",
-      "brand_headline": "",
-      "brand_description": "<p></p>",
+      "brand_headline": "Vanta",
+      "brand_description": "<p>Graphic streetwear, screen-printed in small batches. Designed and printed in Karachi. Shipped nationwide.</p>",
       "brand_image_width": 100,
       "social_twitter_link": "",
       "social_facebook_link": "",

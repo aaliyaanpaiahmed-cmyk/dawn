@@ -1,0 +1,94 @@
+{% stylesheet %}
+  .marquee {
+    overflow: hidden;
+    padding: 9px 0;
+  }
+
+  .marquee__track {
+    display: flex;
+    width: 200%;
+    animation: marquee-scroll 18s linear infinite;
+  }
+
+  .marquee__set {
+    flex: 1;
+    display: flex;
+    justify-content: space-around;
+    font-family: 'Space Mono', ui-monospace, monospace;
+    font-size: 1.2rem;
+    letter-spacing: 0.2em;
+    text-transform: uppercase;
+  }
+
+  @keyframes marquee-scroll {
+    from {
+      transform: translateX(0);
+    }
+    to {
+      transform: translateX(-50%);
+    }
+  }
+
+  @media (prefers-reduced-motion: reduce) {
+    .marquee__track {
+      animation: none;
+    }
+  }
+{% endstyle %}
+
+<div class="marquee color-{{ section.settings.color_scheme }} gradient">
+  <div class="marquee__track">
+    {%- for i in (1..2) -%}
+      <span class="marquee__set">
+        {%- for block in section.blocks -%}
+          <span {{ block.shopify_attributes }}>{{ block.settings.text }}</span>
+          <span aria-hidden="true">★</span>
+        {%- endfor -%}
+      </span>
+    {%- endfor -%}
+  </div>
+</div>
+
+{% schema %}
+{
+  "name": "Marquee",
+  "class": "section",
+  "tag": "section",
+  "disabled_on": {
+    "groups": ["header", "footer"]
+  },
+  "settings": [
+    {
+      "type": "color_scheme",
+      "id": "color_scheme",
+      "label": "Color scheme",
+      "default": "scheme-panel"
+    }
+  ],
+  "blocks": [
+    {
+      "type": "item",
+      "name": "Item",
+      "settings": [
+        {
+          "type": "text",
+          "id": "text",
+          "default": "New drop every friday",
+          "label": "Text"
+        }
+      ]
+    }
+  ],
+  "presets": [
+    {
+      "name": "Marquee",
+      "blocks": [
+        { "type": "item" },
+        { "type": "item" },
+        { "type": "item" },
+        { "type": "item" }
+      ]
+    }
+  ]
+}
+{% endschema %}
