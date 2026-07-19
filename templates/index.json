@@ -51,7 +51,7 @@
         "heading": {
           "type": "heading",
           "settings": {
-            "heading": "Graphic<span class=\"outline\">or die.</span>",
+            "heading": "<strong>Graphic</strong><br>or die.",
             "heading_size": "h0"
           }
         },

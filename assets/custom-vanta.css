@@ -127,18 +127,19 @@
 
 .banner__box.color-scheme-void .banner__heading {
   text-transform: uppercase;
-  font-weight: 900;
+  font-weight: 500;
   line-height: 0.82;
   letter-spacing: -0.01em;
   font-size: clamp(7.6rem, 11vw, 14rem);
   margin: 1.6rem 0 2.6rem;
-}
-
-.banner__box.color-scheme-void .banner__heading .outline {
-  display: block;
-  font-weight: 500;
   color: transparent;
   -webkit-text-stroke: 1px var(--vanta-bone);
+}
+
+.banner__box.color-scheme-void .banner__heading strong {
+  font-weight: 900;
+  color: var(--vanta-bone);
+  -webkit-text-stroke: 0;
 }
 
 .banner__box.color-scheme-void .banner__text.caption-with-letter-spacing {
