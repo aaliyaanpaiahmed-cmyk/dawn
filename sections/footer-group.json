@@ -4,11 +4,44 @@
   "sections": {
     "footer": {
       "type": "footer",
-      "blocks": {},
-      "block_order": [],
+      "blocks": {
+        "brand": {
+          "type": "brand_information",
+          "settings": {
+            "show_social": true
+          }
+        },
+        "information": {
+          "type": "link_list",
+          "settings": {
+            "heading": "Information",
+            "menu": "footer"
+          }
+        },
+        "shop": {
+          "type": "text",
+          "settings": {
+            "heading": "Shop",
+            "subtext": "<p>Men<br>Women<br>New arrivals<br>Best sellers</p>"
+          }
+        },
+        "customer_service": {
+          "type": "text",
+          "settings": {
+            "heading": "Customer service",
+            "subtext": "<p>Karachi, Pakistan<br>hello@vanta.pk</p>"
+          }
+        }
+      },
+      "block_order": [
+        "brand",
+        "information",
+        "shop",
+        "customer_service"
+      ],
       "settings": {
-        "color_scheme": "scheme-1",
-        "newsletter_enable": true,
+        "color_scheme": "scheme-void",
+        "newsletter_enable": false,
         "newsletter_heading": "Subscribe to our emails",
         "enable_follow_on_shop": true,
         "show_social": true,

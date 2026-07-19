@@ -1,0 +1,189 @@
+/* Vanta redesign — global overrides layered on top of base.css */
+
+:root {
+  --vanta-void: #0a0a0a;
+  --vanta-ink: #000000;
+  --vanta-bone: #f4f2ec;
+  --vanta-ash: #8f8f8a;
+  --vanta-line: rgba(244, 242, 236, 0.14);
+  --vanta-mono: 'Space Mono', ui-monospace, monospace;
+}
+
+.color-scheme-void,
+.color-scheme-bone {
+  --font-heading-family: 'Archivo', sans-serif;
+}
+
+/* ---------- Header ---------- */
+.header-wrapper.color-scheme-void {
+  background: rgba(10, 10, 10, 0.86);
+  backdrop-filter: blur(10px);
+  border-bottom: 1px solid var(--vanta-line);
+}
+
+.header-wrapper.color-scheme-void .header__heading-link {
+  font-weight: 900;
+  font-size: 2rem;
+  letter-spacing: 0.3em;
+  text-transform: uppercase;
+}
+
+.header-wrapper.color-scheme-void .list-menu__item--link,
+.header-wrapper.color-scheme-void summary.list-menu__item {
+  font-family: var(--vanta-mono);
+  font-size: 1.2rem;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+}
+
+.header-wrapper.color-scheme-void .header__icons {
+  font-family: var(--vanta-mono);
+}
+
+/* ---------- Announcement bar ---------- */
+.utility-bar.color-scheme-bone,
+.announcement-bar.color-scheme-bone {
+  text-align: center;
+}
+
+.color-scheme-bone .announcement-bar__message {
+  font-family: var(--vanta-mono);
+  font-size: 1.15rem;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+}
+
+/* ---------- Hero / image banner ---------- */
+.banner:has(.banner__box.color-scheme-void) {
+  background: radial-gradient(120% 90% at 50% 0%, #161616 0%, #0a0a0a 58%, #000 100%);
+}
+
+.banner__box.color-scheme-void .banner__heading {
+  text-transform: uppercase;
+  font-weight: 900;
+  line-height: 0.88;
+  letter-spacing: -0.01em;
+}
+
+.banner__box.color-scheme-void .banner__text {
+  color: var(--vanta-ash);
+  font-family: var(--vanta-mono);
+  font-size: 1.4rem;
+  letter-spacing: 0.02em;
+}
+
+.banner__box.color-scheme-void .button {
+  font-family: var(--vanta-mono);
+  font-weight: 700;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  border-radius: 2px;
+}
+
+/* ---------- Section headings (featured collection / collection list) ---------- */
+.color-scheme-void .title,
+.color-scheme-bone .title,
+.color-scheme-void .collection-list-title,
+.color-scheme-bone .collection-list-title {
+  text-transform: uppercase;
+  font-weight: 900;
+  letter-spacing: -0.01em;
+}
+
+.color-scheme-void .view-all,
+.color-scheme-bone .view-all {
+  font-family: var(--vanta-mono);
+  font-size: 1.2rem;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+}
+
+/* ---------- Product cards ---------- */
+.color-scheme-void .card-wrapper .card__inner,
+.color-scheme-void .card-wrapper .card__media {
+  border: 1px solid var(--vanta-line);
+}
+
+.color-scheme-void .card__heading {
+  font-weight: 600;
+  letter-spacing: 0.01em;
+}
+
+.color-scheme-void .card__badge .badge {
+  font-family: var(--vanta-mono);
+  font-size: 1rem;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  border-radius: 2px;
+}
+
+.color-scheme-void .price {
+  font-family: var(--vanta-mono);
+}
+
+.color-scheme-void .quick-add__submit {
+  font-family: var(--vanta-mono);
+  font-size: 1.1rem;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  border-radius: 2px;
+}
+
+/* ---------- Collection tiles ---------- */
+.color-scheme-bone .card--collection .card__heading {
+  font-weight: 900;
+  font-size: 1.9rem;
+  text-transform: uppercase;
+  letter-spacing: 0.02em;
+}
+
+/* ---------- Newsletter ---------- */
+.newsletter.color-scheme-void {
+  border-top: 1px solid var(--vanta-line);
+  border-bottom: 1px solid var(--vanta-line);
+}
+
+.newsletter.color-scheme-void h2 {
+  text-transform: uppercase;
+  font-weight: 900;
+}
+
+.newsletter.color-scheme-void .newsletter__subheading {
+  font-family: var(--vanta-mono);
+  color: var(--vanta-ash);
+}
+
+.newsletter.color-scheme-void .field__input {
+  font-family: var(--vanta-mono);
+}
+
+.newsletter.color-scheme-void .newsletter-form__button {
+  font-family: var(--vanta-mono);
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  border-radius: 2px;
+}
+
+/* ---------- Footer ---------- */
+.footer.color-scheme-void .footer-block__heading {
+  font-family: var(--vanta-mono);
+  font-size: 1.1rem;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  color: var(--vanta-ash);
+}
+
+.footer.color-scheme-void .footer-block__details-content a {
+  color: rgba(244, 242, 236, 0.8);
+}
+
+.footer.color-scheme-void .footer-block__details-content a:hover {
+  color: var(--vanta-bone);
+}
+
+.footer.color-scheme-void .footer__copyright {
+  font-family: var(--vanta-mono);
+  font-size: 1.1rem;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+}
