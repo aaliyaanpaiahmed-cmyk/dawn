@@ -142,46 +142,6 @@
         "padding_bottom": 40
       }
     },
-    "collection_list": {
-      "type": "collection-list",
-      "blocks": {
-        "collection_1": {
-          "type": "featured_collection",
-          "settings": {
-            "collection": "men-1"
-          }
-        },
-        "collection_2": {
-          "type": "featured_collection",
-          "settings": {
-            "collection": "women-1"
-          }
-        },
-        "collection_3": {
-          "type": "featured_collection",
-          "settings": {
-            "collection": "unisex"
-          }
-        }
-      },
-      "block_order": [
-        "collection_1",
-        "collection_2",
-        "collection_3"
-      ],
-      "settings": {
-        "title": "Shop by collection",
-        "heading_size": "h1",
-        "image_ratio": "portrait",
-        "columns_desktop": 3,
-        "color_scheme": "scheme-bone-alt",
-        "show_view_all": false,
-        "columns_mobile": "1",
-        "swipe_on_mobile": false,
-        "padding_top": 80,
-        "padding_bottom": 80
-      }
-    },
     "featured_collection_trending": {
       "type": "featured-collection",
       "settings": {
@@ -292,7 +252,6 @@
     "marquee",
     "image_banner",
     "featured_collection_new",
-    "collection_list",
     "featured_collection_trending",
     "testimonials",
     "newsletter"
