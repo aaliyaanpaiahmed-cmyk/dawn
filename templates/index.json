@@ -48,10 +48,17 @@
             "text_style": "caption-with-letter-spacing"
           }
         },
-        "heading": {
+        "heading_line1": {
           "type": "heading",
           "settings": {
-            "heading": "<strong>Graphic</strong><br>or die.",
+            "heading": "Graphic",
+            "heading_size": "h0"
+          }
+        },
+        "heading_line2": {
+          "type": "heading",
+          "settings": {
+            "heading": "or die.",
             "heading_size": "h0"
           }
         },
@@ -76,7 +83,8 @@
       },
       "block_order": [
         "eyebrow",
-        "heading",
+        "heading_line1",
+        "heading_line2",
         "paragraph",
         "button"
       ],
