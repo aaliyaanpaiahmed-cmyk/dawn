@@ -90,13 +90,31 @@
   font-weight: 900;
   line-height: 0.88;
   letter-spacing: -0.01em;
+  font-size: clamp(4rem, 9vw, 11rem);
 }
 
-.banner__box.color-scheme-void .banner__text {
+.banner__box.color-scheme-void .banner__heading .outline {
+  display: inline-block;
+  color: transparent;
+  -webkit-text-stroke: 1px var(--vanta-bone);
+  text-stroke: 1px var(--vanta-bone);
+}
+
+.banner__box.color-scheme-void .banner__text.caption-with-letter-spacing {
+  color: var(--vanta-ash);
+  font-family: var(--vanta-mono);
+  font-size: 1.1rem;
+  letter-spacing: 0.28em;
+  text-transform: uppercase;
+  margin-bottom: 1.2rem;
+}
+
+.banner__box.color-scheme-void .banner__text.body {
   color: var(--vanta-ash);
   font-family: var(--vanta-mono);
   font-size: 1.4rem;
   letter-spacing: 0.02em;
+  max-width: 46rem;
 }
 
 .banner__box.color-scheme-void .button {
@@ -117,12 +135,35 @@
   letter-spacing: -0.01em;
 }
 
-.color-scheme-void .view-all,
-.color-scheme-bone .view-all {
+.title-wrapper--with-view-all {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+  gap: 2rem;
+  flex-wrap: wrap;
+}
+
+.collection__subheading {
+  font-family: var(--vanta-mono);
+  font-size: 1.1rem;
+  letter-spacing: 0.24em;
+  text-transform: uppercase;
+  opacity: 0.6;
+  margin-bottom: 1rem;
+}
+
+.color-scheme-void .collection__title-view-all,
+.color-scheme-bone .collection__title-view-all {
   font-family: var(--vanta-mono);
   font-size: 1.2rem;
   letter-spacing: 0.14em;
   text-transform: uppercase;
+  white-space: nowrap;
+}
+
+.color-scheme-void .collection__title-view-all::after,
+.color-scheme-bone .collection__title-view-all::after {
+  content: ' →';
 }
 
 /* ---------- Product cards ---------- */

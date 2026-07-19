@@ -3,17 +3,31 @@
     "image_banner": {
       "type": "image-banner",
       "blocks": {
+        "eyebrow": {
+          "type": "text",
+          "settings": {
+            "text": "Oversized · 240gsm · Boxed fit",
+            "text_style": "caption-with-letter-spacing"
+          }
+        },
         "heading": {
           "type": "heading",
           "settings": {
-            "heading": "Wear the Void.",
+            "heading": "WEAR THE<br><span class=\"outline\">VOID.</span>",
             "heading_size": "h0"
+          }
+        },
+        "paragraph": {
+          "type": "text",
+          "settings": {
+            "text": "Heavyweight oversized tees cut for the dark. Eight-piece launch collection, dropped in limited runs and never restocked.",
+            "text_style": "body"
           }
         },
         "button": {
           "type": "buttons",
           "settings": {
-            "button_label_1": "Shop new arrivals",
+            "button_label_1": "Shop new arrivals →",
             "button_link_1": "shopify://collections/all",
             "button_style_secondary_1": false,
             "button_label_2": "Browse the range",
@@ -23,7 +37,9 @@
         }
       },
       "block_order": [
+        "eyebrow",
         "heading",
+        "paragraph",
         "button"
       ],
       "settings": {
@@ -42,6 +58,7 @@
     "featured_collection_new": {
       "type": "featured-collection",
       "settings": {
+        "subheading": "Just landed",
         "title": "New arrivals",
         "heading_size": "h2",
         "description": "",
@@ -53,14 +70,14 @@
         "color_scheme": "scheme-void",
         "full_width": false,
         "show_view_all": true,
-        "view_all_style": "solid",
+        "view_all_style": "link",
         "enable_desktop_slider": false,
         "swipe_on_mobile": false,
         "image_ratio": "portrait",
         "image_shape": "default",
         "show_secondary_image": false,
         "show_vendor": false,
-        "show_rating": false,
+        "show_rating": true,
         "quick_add": "standard",
         "columns_mobile": "2",
         "padding_top": 80,
@@ -110,6 +127,7 @@
     "featured_collection_trending": {
       "type": "featured-collection",
       "settings": {
+        "subheading": "Moving fast",
         "title": "Trending now",
         "heading_size": "h2",
         "description": "",
@@ -121,14 +139,14 @@
         "color_scheme": "scheme-void",
         "full_width": false,
         "show_view_all": true,
-        "view_all_style": "solid",
+        "view_all_style": "link",
         "enable_desktop_slider": false,
         "swipe_on_mobile": false,
         "image_ratio": "portrait",
         "image_shape": "default",
         "show_secondary_image": false,
         "show_vendor": false,
-        "show_rating": false,
+        "show_rating": true,
         "quick_add": "standard",
         "columns_mobile": "2",
         "padding_top": 40,
