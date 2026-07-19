@@ -19,6 +19,7 @@
 
 .color-scheme-void,
 .color-scheme-bone,
+.color-scheme-bone-alt,
 .color-scheme-panel {
   --font-heading-family: 'Archivo', sans-serif;
 }
@@ -173,8 +174,10 @@
 /* ---------- Section headings (featured collection / collection list) ---------- */
 .color-scheme-void .title,
 .color-scheme-bone .title,
+.color-scheme-bone-alt .title,
 .color-scheme-void .collection-list-title,
-.color-scheme-bone .collection-list-title {
+.color-scheme-bone .collection-list-title,
+.color-scheme-bone-alt .collection-list-title {
   text-transform: uppercase;
   font-weight: 900;
   letter-spacing: -0.01em;
@@ -199,13 +202,15 @@
   margin-bottom: 1.2rem;
 }
 
-.color-scheme-bone .collection__subheading {
+.color-scheme-bone .collection__subheading,
+.color-scheme-bone-alt .collection__subheading {
   color: var(--vanta-muted-light);
   opacity: 1;
 }
 
 .color-scheme-void .collection__title-view-all,
-.color-scheme-bone .collection__title-view-all {
+.color-scheme-bone .collection__title-view-all,
+.color-scheme-bone-alt .collection__title-view-all {
   font-family: var(--vanta-mono);
   font-size: 1.2rem;
   letter-spacing: 0.16em;
@@ -214,7 +219,8 @@
 }
 
 .color-scheme-void .collection__title-view-all::after,
-.color-scheme-bone .collection__title-view-all::after {
+.color-scheme-bone .collection__title-view-all::after,
+.color-scheme-bone-alt .collection__title-view-all::after {
   content: ' →';
 }
 
@@ -274,12 +280,25 @@
   color: var(--vanta-bone);
 }
 
+.color-scheme-void .card-information__row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 1rem;
+  margin-top: 0.5rem;
+}
+
+.color-scheme-void .rating-star {
+  --color-rating-star: var(--vanta-ash);
+}
+
 .color-scheme-void .rating-text,
 .color-scheme-void .rating-count {
   font-family: var(--vanta-mono);
   font-size: 1.1rem;
   letter-spacing: 0.1em;
   color: var(--vanta-ash);
+  white-space: nowrap;
 }
 
 .color-scheme-void .quick-add__submit {

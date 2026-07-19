@@ -91,6 +91,17 @@
             "secondary_button_label": "#8F8F8A",
             "shadow": "#000000"
           }
+        },
+        "scheme-bone-alt": {
+          "settings": {
+            "background": "#FAF9F5",
+            "background_gradient": "",
+            "text": "#0A0A0A",
+            "button": "#0A0A0A",
+            "button_label": "#FAF9F5",
+            "secondary_button_label": "#0A0A0A",
+            "shadow": "#000000"
+          }
         }
       },
       "type_header_font": "assistant_n4",
