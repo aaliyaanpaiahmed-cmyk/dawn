@@ -431,11 +431,19 @@
   }
 
   .header-wrapper.color-scheme-void .header__icons {
-    gap: 1rem;
+    gap: 1.2rem;
   }
 
   .header-wrapper.color-scheme-void .header__icon-label {
-    font-size: 1rem;
+    display: none;
+  }
+
+  .header-wrapper.color-scheme-void .header__icon .svg-wrapper {
+    display: block;
+  }
+
+  .header-wrapper.color-scheme-void .header__icon .cart-count-bubble {
+    display: block;
   }
 
   .banner:has(.banner__box.color-scheme-void) {
@@ -443,10 +451,7 @@
   }
 
   .banner__corner-label {
-    top: 1.6rem;
-    right: 1.8rem;
-    font-size: 0.9rem;
-    letter-spacing: 0.18em;
+    display: none;
   }
 
   .banner__box.color-scheme-void .banner__heading {
