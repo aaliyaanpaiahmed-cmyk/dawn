@@ -394,3 +394,76 @@
   text-transform: uppercase;
   color: var(--vanta-ash);
 }
+
+/* ---------- Mobile ---------- */
+@media screen and (max-width: 749px) {
+  .header-wrapper.color-scheme-void .header {
+    min-height: auto;
+  }
+
+  .header-wrapper.color-scheme-void .header__heading-link {
+    font-size: 1.8rem;
+    letter-spacing: 0.22em;
+    padding-left: 0.22em;
+  }
+
+  .header-wrapper.color-scheme-void .header__icons {
+    gap: 1rem;
+  }
+
+  .header-wrapper.color-scheme-void .header__icon-label {
+    font-size: 1rem;
+  }
+
+  .banner:has(.banner__box.color-scheme-void) {
+    min-height: 42rem;
+  }
+
+  .banner__corner-label {
+    top: 1.6rem;
+    right: 1.8rem;
+    font-size: 0.9rem;
+    letter-spacing: 0.18em;
+  }
+
+  .banner__box.color-scheme-void .banner__heading {
+    font-size: clamp(3.6rem, 13vw, 6rem);
+  }
+
+  .banner__box.color-scheme-void .banner__text.body {
+    max-width: 100%;
+  }
+
+  .color-scheme-void .title,
+  .color-scheme-bone .title,
+  .color-scheme-void .collection-list-title,
+  .color-scheme-bone .collection-list-title {
+    font-size: 2.8rem;
+  }
+
+  .title-wrapper--with-view-all {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 0.8rem;
+  }
+
+  .card-information__row {
+    flex-wrap: wrap;
+    row-gap: 0.4rem;
+  }
+
+  .color-scheme-void .rating-text,
+  .color-scheme-void .rating-count {
+    white-space: normal;
+  }
+
+  .newsletter.color-scheme-void h2 {
+    font-size: 2.6rem;
+  }
+
+  .footer.color-scheme-void .footer-block__brand-info .footer-block__heading {
+    font-size: 2.2rem;
+    letter-spacing: 0.22em;
+    padding-left: 0.22em;
+  }
+}
