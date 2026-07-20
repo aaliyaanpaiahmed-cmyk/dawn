@@ -81,12 +81,12 @@
         "button": {
           "type": "buttons",
           "settings": {
-            "button_label_1": "Shop the drop →",
+            "button_label_1": "Men",
             "button_link_1": "shopify://collections/all",
             "button_style_secondary_1": false,
-            "button_label_2": "Browse the range",
-            "button_link_2": "shopify://collections",
-            "button_style_secondary_2": true
+            "button_label_2": "Women",
+            "button_link_2": "",
+            "button_style_secondary_2": false
           }
         }
       },
@@ -116,14 +116,14 @@
     "featured_collection_new": {
       "type": "featured-collection",
       "settings": {
+        "collection": "all",
+        "products_to_show": 12,
         "subheading": "Just landed",
         "title": "New arrivals",
         "heading_size": "h2",
         "description": "",
         "show_description": false,
         "description_style": "body",
-        "collection": "all",
-        "products_to_show": 12,
         "columns_desktop": 4,
         "enable_desktop_slider": true,
         "full_width": false,
