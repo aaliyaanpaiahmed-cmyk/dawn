@@ -24,16 +24,19 @@
 }
 
 /* ---------- Header ---------- */
-.header-wrapper.color-scheme-void {
+/* Scoped to .header-wrapper only (not a specific color-scheme class) so
+   this styling can't silently break if the header's scheme setting is
+   changed in the theme editor — this look is unconditional for Vanta. */
+.header-wrapper {
   background: transparent;
   border-bottom: 1px solid var(--vanta-line);
 }
 
-.header-wrapper.color-scheme-void .header {
+.header-wrapper .header {
   min-height: 8rem;
 }
 
-.header-wrapper.color-scheme-void .header__heading-link {
+.header-wrapper .header__heading-link {
   font-weight: 900;
   font-size: 3rem;
   letter-spacing: 0.42em;
@@ -42,8 +45,8 @@
   justify-self: center;
 }
 
-.header-wrapper.color-scheme-void .list-menu__item--link,
-.header-wrapper.color-scheme-void summary.list-menu__item {
+.header-wrapper .list-menu__item--link,
+.header-wrapper summary.list-menu__item {
   font-family: var(--vanta-mono);
   font-size: 1.2rem;
   letter-spacing: 0.16em;
@@ -52,21 +55,21 @@
   transition: opacity 0.2s;
 }
 
-.header-wrapper.color-scheme-void .list-menu__item--link:hover {
+.header-wrapper .list-menu__item--link:hover {
   opacity: 1;
 }
 
-.header-wrapper.color-scheme-void .header__icons {
+.header-wrapper .header__icons {
   font-family: var(--vanta-mono);
   gap: 2rem;
 }
 
-.header-wrapper.color-scheme-void .header__icon .svg-wrapper,
-.header-wrapper.color-scheme-void .header__icon .cart-count-bubble {
+.header-wrapper .header__icon .svg-wrapper,
+.header-wrapper .header__icon .cart-count-bubble {
   display: none;
 }
 
-.header-wrapper.color-scheme-void .header__icon-label {
+.header-wrapper .header__icon-label {
   font-size: 1.2rem;
   letter-spacing: 0.1em;
   text-transform: uppercase;
@@ -74,7 +77,7 @@
   opacity: 0.82;
 }
 
-.header-wrapper.color-scheme-void .header__icon--cart .header__icon-label {
+.header-wrapper .header__icon--cart .header__icon-label {
   opacity: 1;
   border: 1px solid var(--vanta-line);
   border-radius: 2px;
@@ -420,29 +423,29 @@
 
 /* ---------- Mobile ---------- */
 @media screen and (max-width: 749px) {
-  .header-wrapper.color-scheme-void .header {
+  .header-wrapper .header {
     min-height: auto;
   }
 
-  .header-wrapper.color-scheme-void .header__heading-link {
+  .header-wrapper .header__heading-link {
     font-size: 1.8rem;
     letter-spacing: 0.22em;
     padding-left: 0.22em;
   }
 
-  .header-wrapper.color-scheme-void .header__icons {
+  .header-wrapper .header__icons {
     gap: 1.2rem;
   }
 
-  .header-wrapper.color-scheme-void .header__icon-label {
+  .header-wrapper .header__icon-label {
     display: none;
   }
 
-  .header-wrapper.color-scheme-void .header__icon .svg-wrapper {
+  .header-wrapper .header__icon .svg-wrapper {
     display: block;
   }
 
-  .header-wrapper.color-scheme-void .header__icon .cart-count-bubble {
+  .header-wrapper .header__icon .cart-count-bubble {
     display: block;
   }
 
