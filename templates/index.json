@@ -1,3 +1,12 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
 {
   "sections": {
     "marquee": {
@@ -51,14 +60,14 @@
         "heading_line1": {
           "type": "heading",
           "settings": {
-            "heading": "Graphic",
+            "heading": "Wear",
             "heading_size": "h0"
           }
         },
         "heading_line2": {
           "type": "heading",
           "settings": {
-            "heading": "or die.",
+            "heading": "The Void",
             "heading_size": "h0"
           }
         },
@@ -91,15 +100,16 @@
       "settings": {
         "corner_label_line_1": "Drop 04",
         "corner_label_line_2": "Graphic tees only",
+        "image": "shopify://shop_images/vb.jpg",
         "image_overlay_opacity": 0,
         "image_height": "large",
-        "desktop_content_position": "bottom-center",
-        "show_text_box": false,
         "image_behavior": "none",
+        "desktop_content_position": "bottom-center",
         "desktop_content_alignment": "center",
+        "show_text_box": false,
         "color_scheme": "scheme-void",
-        "mobile_content_alignment": "center",
         "stack_images_on_mobile": false,
+        "mobile_content_alignment": "center",
         "show_text_below": false
       }
     },
@@ -115,12 +125,11 @@
         "collection": "all",
         "products_to_show": 12,
         "columns_desktop": 4,
-        "color_scheme": "scheme-void",
+        "enable_desktop_slider": true,
         "full_width": false,
         "show_view_all": true,
         "view_all_style": "link",
-        "enable_desktop_slider": false,
-        "swipe_on_mobile": false,
+        "color_scheme": "scheme-void",
         "image_ratio": "portrait",
         "image_shape": "default",
         "show_secondary_image": false,
@@ -128,6 +137,7 @@
         "show_rating": true,
         "quick_add": "standard",
         "columns_mobile": "2",
+        "swipe_on_mobile": true,
         "padding_top": 80,
         "padding_bottom": 80
       }
