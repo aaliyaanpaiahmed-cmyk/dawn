@@ -268,6 +268,29 @@
   border-radius: 2px;
 }
 
+.card__status-badge {
+  position: absolute;
+  bottom: 1.2rem;
+  left: 1.2rem;
+  z-index: 2;
+  font-family: var(--vanta-mono);
+  font-size: 1rem;
+  font-weight: 700;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+  background: var(--vanta-void);
+  color: var(--vanta-bone);
+  border: 1px solid var(--vanta-line);
+  padding: 0.5rem 0.9rem;
+  border-radius: 2px;
+}
+
+/* Dawn's native badge relies on a margin trick that doesn't line up
+   with the restructured card layout — the status badge above replaces it. */
+.color-scheme-void .card__badge {
+  display: none;
+}
+
 .color-scheme-void .card__heading {
   font-weight: 600;
   font-size: 1.45rem;
