@@ -69,6 +69,23 @@
   display: none;
 }
 
+/* The icons are replaced with text labels (below), but base.css still
+   pins .header__icon to a fixed 44px icon-sized box. Left alone, labels
+   like "Bag · Rs.0.00" overflow that box and visually overlap neighboring
+   icons, so let each icon size itself to its label text instead. */
+@media screen and (min-width: 750px) {
+  .header-wrapper .header__icon {
+    width: auto;
+    height: auto;
+    min-height: 4.4rem;
+    padding: 0 0.2rem;
+  }
+
+  .header-wrapper .header__icon--cart {
+    margin-right: 0;
+  }
+}
+
 .header-wrapper .header__icon-label {
   font-size: 1.2rem;
   letter-spacing: 0.1em;
