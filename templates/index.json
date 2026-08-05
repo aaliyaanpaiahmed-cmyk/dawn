@@ -82,7 +82,7 @@
           "type": "buttons",
           "settings": {
             "button_label_1": "Men",
-            "button_link_1": "shopify://collections/all",
+            "button_link_1": "shopify://collections/men",
             "button_style_secondary_1": false,
             "button_label_2": "Women",
             "button_link_2": "",
